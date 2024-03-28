@@ -59,12 +59,16 @@ Create a function called sumArray. It should take an array of numbers and return
 Complete Exercise 4 in the space below:
 */
 
-const sumArray = (numA, numB, numC) => {
-    return numA + numB + numC
-}
-
-const sum = add(1, 2, 3);
-console.log('Exercise 4 Result:', (const sum = add(1, 2, 3))
+function addNums(nums) {
+    let sum = 0;
+    for (let i = 0; i < nums.length; i++) {
+      sum += nums[i];
+    }
+    return sum;
+  }
+  
+  //console.log(addNums([2, 4, 5]))
+  console.log('Exercise 4 Result:', addNums([2, 4, 5]))
 
 /*
 Exercise 5: multiplyArray
@@ -78,8 +82,8 @@ const multiplyArray = (numA, numB, numC) => {
     return numA * numB + numC
 }
 
-result =  2, 4, 5;
-console.log('Exercise 5 Result:', multiplyArray)
+//result =  2, 4, 5;
+console.log('Exercise 5 Result:', multiplyArray(2, 4, 5))
 
 /*
 Exercise 6: reverseString
