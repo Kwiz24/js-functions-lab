@@ -46,10 +46,19 @@ Write a function named isCharAVowel that takes a single character as an argument
 Complete Exercise 3 in the space below:
 */
 
-const isCharAVowel = (i) => {
-'i' === 'i'
+function isCharAVowel(char) {
+  // Convert the character to lowercase to handle both uppercase and lowercase vowels
+  lowercaseChar = char.toLowerCase();
+
+  // Check if the character is a vowel excluding 'y'
+  if (lowercaseChar === 'a' ) {
+      return true;
+  } else {
+      return false;
+  }
+  
 }
-console.log('Exercise 3 Result:', 'i' === 'i');
+console.log('Exercise 3 Result:', (isCharAVowel('a')));
 
 /*
 Exercise 4: sumArray
@@ -78,12 +87,18 @@ Define a function called multiplyArray. It should take an array of numbers and r
 Complete Exercise 5 in the space below:
 */
 
-const multiplyArray = (numA, numB, numC) => {
-    return numA * numB + numC
+function multiplyArray(numbers) {
+  // Use the reduce method to multiply all elements in the array
+  product = numbers.reduce(function(acc, currentValue) {
+      return acc * currentValue;
+  }, 1); // Initialize accumulator to 1 for multiplication
+
+  return product;
 }
 
-//result =  2, 4, 5;
-console.log('Exercise 5 Result:', multiplyArray(2, 4, 5))
+// Test case
+console.log('Exercise 5 Result:', multiplyArray([2, 4, 5]));
+
 
 /*
 Exercise 6: reverseString
@@ -133,7 +148,13 @@ Write a function called stringsLongerThan. It takes an array of strings and a nu
 Complete Exercise 8 in the space below:
 */
 
-let str = "say hello in the morning";  
-let truncatedStr = str.substring(4, 25); 
-//console.log(truncatedStr); 
-console.log('Exercise 8 Result:', (truncatedStr))
+function stringsLongerThan(stringsArray, length) {
+  // Use the filter method to return strings longer than the given number
+  longerStrings = stringsArray.filter(function(string) {
+      return string.length > length;
+  });
+
+  return longerStrings;
+}
+
+console.log('Exercise 8 Result:', stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3));
